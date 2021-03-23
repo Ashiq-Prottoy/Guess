@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Guessing Game</title>
+    </head>
+<body>
+        <style>
+            body{
+                color:white;
+                font-family: Monospace;
+                font-weight: bold;
+                padding-top:50px;
+            }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            h1,h3{
+                text-align: center;
+                padding:10px 0px 10px 0px;
+                margin:10px 0px;
+            }
+            h2{
+                padding:10px 0px;
+                margin:10px 0px;
+            }
+            #won{
+                background: #77FF00;
+            }
+            #lose{
+                background: #FF2F2D;
+            }
+            
+        </style>
+        <h1>Guessing Game</h1>
+        
+        
+        
+ 
+<script>
+    var numberOfWon=0;
+    var numberOfLose=0;
+            
+    for(var i=0;i<=5;i++){
+        var userNumber=parseInt(prompt("Guess a number from 1 to 5!"));
+        var randomNumber=Math.floor(Math.random()*5)+1;
+        
+        if(userNumber==randomNumber){
+            document.write("<h3 id='won'>You are won!</h3>");
+            numberOfWon++;
+        }
+        else{
+            document.write("<h3 id='lose'>You are lose ! The random number was  "+randomNumber+"</h3>");
+            numberOfLose++;
+        }
+    }
+    document.write("<h2>Total number of wins "+numberOfWon+"</h2>");
+    document.write("<h2>Total number of loose "+numberOfLose+"</h2>");
+</script>
+</body>
+</html>
